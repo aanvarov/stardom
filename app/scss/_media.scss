@@ -1,0 +1,132 @@
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1178px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .header__search {
+    width: 350px;
+  }
+  .header__phone-link {
+    font-size: 28px;
+  }
+  .header__ask-questions {
+    margin-left: 200px;
+  }
+  .top {
+    &__slider-img {
+      width: 600px;
+      height: auto;
+    }
+    &__advans {
+      bottom: 10px;
+      padding: 21px 0 22px;
+    }
+    .slick-dots {
+      bottom: 35px;
+    }
+  }
+  .about__info-title {
+    font-size: 26px;
+  }
+  .about__info-subtitle {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .about__info-text {
+    line-height: 28px;
+    margin-top: 10px;
+  }
+  .catalog__slider-link {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  .catalog__box {
+    max-width: 231px;
+  }
+  .questions__form-title {
+    font-size: 28px;
+  }
+  .questions__form__elements {
+    min-width: 450px;
+  }
+  .questions__form-submit {
+    padding: 10px 60px;
+    font-size: 14px;
+  }
+  .questions__form__inputs {
+    // min-width: 280px;
+    margin-right: 35px;
+  }
+  .questions__form-input {
+    padding: 13px 15px 15px;
+    margin-bottom: 21px;
+  }
+  .news__item {
+    max-width: 260px;
+  }
+  .news__item .play-circle {
+    top: 60px;
+    left: 105px;
+  }
+  .news__item-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  .news__item-text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .team__item {
+    max-width: 250px;
+  }
+  .contacts__infos {
+    min-width: 730px;
+    padding: 35px 45px;
+  }
+  .contacts__nav-link {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 3px 8px;
+  }
+  .contacts__form-title {
+    font-size: 23px;
+    line-height: 27px;
+  }
+  .contacts__form {
+    max-width: 370px;
+  }
+  .contacts__form-privacy {
+    font-size: 12px;
+  }
+  .contacts__btn-submit {
+    font-size: 15px;
+    line-height: 19px;
+    padding: 11px 0;
+    margin-bottom: 20px;
+  }
+  .contacts__address,
+  .contacts__link {
+    font-size: 14px;
+  }
+  .footer__items {
+    padding: 35px 0;
+  }
+  .footer__link,
+  .footer__address {
+    font-size: 14px;
+  }
+  .footer__icon,
+  .footer__icon-socials {
+    width: 40px;
+    height: 40px;
+  }
+  .footer__icon {
+    margin-right: 10px;
+  }
+  .footer__copyright {
+    font-size: 12px;
+  }
+}

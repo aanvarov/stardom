@@ -571,8 +571,8 @@
                     <div class="questions__form-title">Do you have any questions? Don’t hesitate to contact us</div>
                     <div class="questions__form__inner">
                         <div class="questions__form__inputs">
-                            <input class="questions__form-input" type="text" placeholder="Your name*">
-                            <input class="questions__form-input" type="number" placeholder="Phone number*">
+                            <input class="questions__form-input" name="name" type="text" placeholder="Your name*">
+                            <input class="questions__form-input" name="phone" type="number" placeholder="Phone number*">
                             <select class="questions__form-input select" name="department">
                                 <option value="department" selected>Department</option>
                                 <option value="departmen">Departmen</option>
@@ -581,10 +581,10 @@
                             </select>
                         </div>
                         <div class="questions__form__elements">
-                            <textarea class="questions__form-textarea" placeholder="Your message*"></textarea>
+                            <textarea class="questions__form-textarea" name="textarea" placeholder="Your message*"></textarea>
                             <div class="questions__form-line">
                                 <div class="questions__form__checkbox">
-                                    <input id="checkbox" class="questions__form-checkbox" type="checkbox">
+                                    <input id="checkbox" class="questions__form-checkbox" type="checkbox" required>
                                     <span></span>
                                     <label class="questions__form-label" for="checkbox">I am not a robot</label>
                                 </div>
@@ -755,6 +755,7 @@
             </div>
         </div>
         <div class="team__line"></div>
+        <div class="team__line2"></div>
     </section>
 
     <section id="partners" class="section partners">

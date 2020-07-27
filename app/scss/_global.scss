@@ -1,0 +1,79 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  &:focus {
+    outline: none;
+  }
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+button {
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+  @extend %gilroy-regular;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+  margin: 0;
+}
+.container {
+  max-width: 1340px;
+  padding: 0 14px;
+  margin: 0 auto;
+  position: relative;
+}
+.section {
+  padding-top: 90px;
+  position: relative;
+}
+.title {
+  @extend %gilroy-extrabold;
+  font-size: 38px;
+  line-height: 40px;
+  color: #333333;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}

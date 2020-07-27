@@ -4,7 +4,8 @@ $(function () {
     autoplay: true,
     fade: true,
     autoplaySpeed: 2500,
-    dots: true
+    dots: true,
+    arrows: false
   });
   $('.catalog__slider').slick({
     slidesToShow: 1,
@@ -35,6 +36,13 @@ $(function () {
         settings: {
           slidesToShow: 5,
           slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 1030,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
         }
       }],
     prevArrow:

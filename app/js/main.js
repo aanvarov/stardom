@@ -75,6 +75,17 @@ $(function () {
     ]
   });
 
+  if (window.innerWidth < 430){
+    $('.news__items, .team__items').slick({
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 5000
+    })
+  }
+
   $('.contacts__nav-link').on('click', function () {
     $('.contacts__nav-link').removeClass('active');
     $(this).addClass('active');

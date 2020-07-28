@@ -502,6 +502,15 @@
   }
 }
 @media (max-width: 425px) {
+  .about__info-btn {
+    padding-left: 0;
+  }
+  .header__search {
+    display: none;
+  }
+  .header__text {
+    display: none;
+  }
   .header__bottom .container {
     text-align: right;
   }
@@ -510,6 +519,17 @@
   }
   .header__bottom__inner {
     display: none;
+  }
+  .header__ask-questions {
+    margin-left: 8px;
+  }
+  .header .menu__search {
+    display: block;
+  }
+  .mobile__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .about__items {
     flex-wrap: wrap;
@@ -526,7 +546,7 @@
   }
   .logo {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0;
   }
   .logo__img img {
     width: 180px;
@@ -575,15 +595,29 @@
   .about__item {
     margin: 15px 10px;
   }
+  .about__img-box img {
+    width: 100%;
+  }
+  .about__buclet::before {
+    display: none;
+  }
   .catalog__slider-nav {
     width: 80%;
     margin-bottom: 15px;
   }
   .catalog__box {
-    max-width: 230px;
+    max-width: 180px;
+    padding: 15px 17px;
+  }
+  .catalog__box-backlay {
+    width: 244px;
   }
   .catalog__boxes {
     justify-content: space-around;
+  }
+  .catalog__box__img {
+    width: 140px;
+    height: 140px;
   }
   .questions__form-title {
     padding: 15px 0;
@@ -600,6 +634,22 @@
   .questions__form__elements {
     min-width: 100%;
   }
+  .questions .select {
+    background-color: #fff;
+  }
+  .news__item {
+    max-width: 310px;
+  }
+  .news__item .play-circle {
+    top: 80px;
+    left: 140px;
+  }
+  .news__btn {
+    margin-top: 50px;
+  }
+  .team__item {
+    max-width: 310px;
+  }
   .contacts__nav {
     flex-wrap: wrap;
   }
@@ -613,7 +663,7 @@
     padding: 3px 3px;
   }
   .contacts__infos {
-    width: 98%;
+    width: 100%;
   }
   .contacts__direction {
     left: 10px;
@@ -653,24 +703,20 @@
       }
     }
   }
-  .team__line3 {
-    height: 60px;
-    background-color: $btn-color;
-    position: absolute;
-    top: 850px;
-    width: 100%;
-    z-index: -1;
+  .team__line {
+    display: none;
   }
-  .team__line4 {
-    height: 60px;
-    background-color: $btn-color;
-    position: absolute;
-    bottom: 590px;
-    width: 100%;
-    z-index: -1;
+  .team__line2 {
+    top: 430px;
+  }
+  .contacts__form {
+    max-width: 100%;
   }
   .contacts__direction-link::after {
     left: -77px;
+  }
+  .footer__item:last-child {
+    justify-content: center;
   }
 }
 @media (max-width: 375px) {
@@ -698,6 +744,12 @@
   }
   .contacts__map .ellipse {
     left: 21px;
+  }
+  .questions__form-line {
+    flex-direction: column;
+  }
+  .questions__form-submit{
+    margin-top: 20px;
   }
 }
 @media (max-width: 350px) {

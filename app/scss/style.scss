@@ -56,10 +56,10 @@
     display: none;
     margin: 5px;
     &__item {
-      width: 45px;
+      width: 40px;
       height: 2px;
       background-color: #fff;
-      margin: 10px 0;
+      margin: 8px 0;
     }
   }
   &__bottom {
@@ -88,12 +88,51 @@
         background-color: $blue-base;
       }
     }
+    &__title {
+      @extend %gilroy-bold;
+      font-size: 24px;
+      line-height: 28px;
+      display: inline-block;
+      color: #fff;
+      margin-left: 20px;
+    }
+    &__search {
+      display: none;
+      margin-left: 20px;
+      width: 90%;
+      position: relative;
+    }
+    &-input {
+      width: 100%;
+      background: #fff;
+      border: 1px solid #d0d0d0;
+      box-sizing: border-box;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 11px 46px 11px 20px;
+      @extend %gilroy-regular;
+      &::placeholder {
+        font-size: 16px;
+        line-height: 24px;
+        color: #adaeb0;
+      }
+      &:focus {
+        outline: none;
+        outline: 1px solid darkgrey;
+      }
+    }
+    &__search-btn {
+      position: absolute;
+      right: 7px;
+      top: 13px;
+    }
   }
   &__ask-questions {
     display: flex;
     align-items: center;
     margin-left: 312px;
   }
+
   &__ask-link {
     @extend %gilroy-bold;
     padding: 15px;
@@ -450,7 +489,7 @@
     border-radius: 6px;
     margin-bottom: 32px;
     padding: 15px 22px;
-    transition: transform 0.3s, background-color 5s, box-shadow .1s;
+    transition: transform 0.3s, background-color 5s, box-shadow 0.1s;
     position: relative;
     &-backlay {
       position: absolute;
@@ -726,6 +765,30 @@
       left: 130px;
     }
   }
+  .slick-dots {
+    position: absolute;
+    bottom: -45px;
+    right: 0;
+    left: 0;
+    width: auto;
+    display: inline-block;
+    li button:before {
+      opacity: 0;
+    }
+    button {
+      width: 10px;
+      height: 10px;
+      border: 1px solid $btn-color;
+      box-sizing: border-box;
+      border-radius: 100%;
+    }
+    .slick-active {
+      button {
+        background-color: $btn-color;
+        border-color: $btn-color;
+      }
+    }
+  }
   &__item-info {
     padding: 20px 32px 30px;
     text-align: left;
@@ -821,6 +884,30 @@
     bottom: 49px;
     width: 100%;
     z-index: -1;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    left: 0;
+    width: auto;
+    display: inline-block;
+    li button:before {
+      opacity: 0;
+    }
+    button {
+      width: 10px;
+      height: 10px;
+      border: 1px solid $btn-color;
+      box-sizing: border-box;
+      border-radius: 100%;
+    }
+    .slick-active {
+      button {
+        background-color: $btn-color;
+        border-color: $btn-color;
+      }
+    }
   }
 }
 .partners {

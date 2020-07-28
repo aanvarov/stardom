@@ -37,11 +37,14 @@
         </div>
         <div class="header__bottom">
             <div class="container">
-                <button class="navbar-toggler">
-                    <div class="navbar-toggler__item"></div>
-                    <div class="navbar-toggler__item"></div>
-                    <div class="navbar-toggler__item"></div>
-                </button>
+                <div class="mobile__menu">
+                    <div class="menu__title">Menu</div>
+                    <button class="navbar-toggler">
+                        <div class="navbar-toggler__item"></div>
+                        <div class="navbar-toggler__item"></div>
+                        <div class="navbar-toggler__item"></div>
+                    </button>
+                </div>
                 <div class="header__bottom__inner">
                     <nav class="menu">
                         <ul class="menu__list">
@@ -59,6 +62,12 @@
                             </li>
                             <li class="menu__list-item">
                                 <a class="menu__list-link" href="#contacts">Contacts</a>
+                            </li>
+                            <li class="menu__search">
+                                <input class="menu-input" type="text" placeholder="I am searching for...">
+                                <button type="submit" class="menu__search-btn">
+                                    <img src="images/icon_search.svg" alt="">
+                                </button>
                             </li>
                         </ul>
                     </nav>
@@ -1418,8 +1427,6 @@
         </div>
         <div class="team__line"></div>
         <div class="team__line2"></div>
-        <div class="team__line3"></div>
-        <div class="team__line4"></div>
     </section>
 
     <section id="partners" class="section partners">

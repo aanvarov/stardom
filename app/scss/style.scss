@@ -34,7 +34,8 @@
       color: #adaeb0;
     }
     &:focus {
-      outline-color: $blue-base;
+      outline: none;
+      outline: 1px solid darkgrey;
     }
   }
   &__search-btn {
@@ -97,6 +98,7 @@
     @extend %gilroy-bold;
     padding: 15px;
     display: flex;
+    height: 45.5px;
     align-items: center;
     img {
       margin-right: 10px;
@@ -115,6 +117,33 @@
     position: relative;
     padding-bottom: 54px;
   }
+  .slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $btn-color;
+    box-shadow: 0px 2px 20px rgba(198, 198, 198, 0.25);
+    position: absolute;
+    top: calc(50% - 15px);
+    &:hover {
+      background-color: #fff;
+      svg {
+        fill: #000;
+      }
+    }
+    &__left {
+      left: -60px;
+    }
+    &__right {
+      right: -60px;
+    }
+    svg {
+      fill: white;
+    }
+  }
   .slick-dots {
     position: absolute;
     bottom: 100px;
@@ -127,14 +156,14 @@
     button {
       width: 10px;
       height: 10px;
-      border: 1px solid #898a8d;
+      border: 1px solid $btn-color;
       box-sizing: border-box;
       border-radius: 100%;
     }
     .slick-active {
       button {
-        background-color: $blue-base;
-        border-color: $blue-base;
+        background-color: $btn-color;
+        border-color: $btn-color;
       }
     }
   }
@@ -237,13 +266,12 @@
   }
   &__buclet-link {
     @extend %gilroy-medium;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 16px;
     color: #fff;
     background-color: $btn-color;
-    padding: 16px 0;
+    padding: 8px 0;
     margin-top: 21px;
-    margin-bottom: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -291,12 +319,17 @@
     margin-top: 10px;
     display: inline-block;
     color: $blue-base;
+    font-size: 14px;
+    line-height: 30px;
     img {
       margin-left: 5px;
     }
     &:hover {
       text-decoration: underline;
     }
+  }
+  .showmore {
+    display: none;
   }
   &__items {
     background-color: $btn-color;
@@ -305,6 +338,7 @@
     align-items: center;
     justify-content: center;
     padding: 44px 0;
+    margin-top: 70px;
   }
   &__item {
     display: flex;
@@ -314,6 +348,12 @@
     color: #f2f2f2;
     width: 200px;
     margin: 0 40px;
+  }
+  .one {
+    min-width: 40px;
+  }
+  .two {
+    min-width: 76px;
   }
   &__item-number {
     font-size: 64px;
@@ -359,6 +399,12 @@
       box-shadow: 0px 2px 20px rgba(198, 198, 198, 0.25);
       position: absolute;
       top: calc(50% - 15px);
+      &:hover {
+        background-color: #fff;
+        svg {
+          fill: #000;
+        }
+      }
       &__left {
         left: -60px;
       }
@@ -367,12 +413,6 @@
       }
       svg {
         fill: white;
-      }
-    }
-    .slick-disabled {
-      background-color: #fff;
-      svg {
-        fill: #000;
       }
     }
   }
@@ -405,15 +445,36 @@
   }
   &__box {
     max-width: 192px;
-    background: #fff;
+    // background-color: #fff;
     box-shadow: 0px 8px 24px rgba(16, 62, 105, 0.1);
     border-radius: 6px;
     margin-bottom: 32px;
     padding: 15px 22px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 5s, box-shadow .1s;
+    position: relative;
+    &-backlay {
+      position: absolute;
+      width: 214px;
+      height: 410px;
+      opacity: 0;
+      background-color: #fff;
+      z-index: -1;
+      top: 0;
+      left: -11px;
+      border-radius: 6px;
+      transition: opacity 0.3s;
+      box-shadow: 0px 8px 24px 15px rgba(16, 62, 105, 0.1);
+    }
     &:hover {
-      transform: scaleX(1.11);
+      // transform: scaleX(1.11);
+      background-color: transparent;
+      box-shadow: none;
+      z-index: 5;
       margin-bottom: -38px;
+      .catalog__box-backlay {
+        display: inline-block;
+        opacity: 1;
+      }
       .catalog__box-btn {
         display: inline-block;
         visibility: visible;
@@ -462,17 +523,17 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
-    padding: 12px 60px;
+    padding: 11px 59px;
     @extend %gilroy-bold;
-    color: #fff;
-    background-color: $btn-color;
+    color: $btn-color;
+    background-color: #fff;
     border-radius: 2px;
     margin-top: 15px;
     margin-bottom: 14px;
+    border: 1px solid $btn-color;
     &:hover {
-      color: $btn-color;
-      background-color: transparent;
-      box-shadow: 0 0 2px 2px $btn-color;
+      color: #fff;
+      background-color: $btn-color;
     }
   }
   &__btn {
@@ -548,7 +609,8 @@
       color: #5f5f5f;
     }
     &:focus {
-      outline-color: $blue-base;
+      outline: none;
+      outline: 1px solid darkgrey;
     }
   }
   .select {
@@ -574,7 +636,8 @@
     height: 121px;
     margin-bottom: 25px;
     &:focus {
-      outline-color: $blue-base;
+      outline: none;
+      outline: 1px solid darkgrey;
     }
   }
   &__form-line {
@@ -653,6 +716,9 @@
     position: relative;
     &:hover {
       box-shadow: 0px 8px 24px rgba(16, 62, 105, 0.1);
+      .news__item-title {
+        color: $blue-base;
+      }
     }
     .play-circle {
       position: absolute;
@@ -832,7 +898,7 @@
     margin-right: 34px;
   }
   &__nav-link {
-    font-weight: bold;
+    @extend %gilroy-bold;
     font-size: 18px;
     line-height: 24px;
     padding: 5px 8px;
@@ -901,7 +967,7 @@
   &__link {
     margin-bottom: 5px;
     &:hover {
-      text-decoration: underline;
+      color: $blue-base;
     }
   }
   &__email {
@@ -918,8 +984,10 @@
     }
   }
   &__map {
+    margin-top: 39px;
     position: relative;
     .ellipse {
+      display: none;
       position: absolute;
       top: 190px;
       left: 190px;
@@ -931,8 +999,8 @@
     position: absolute;
     width: 322px;
     height: 106px;
-    top: 100px;
-    left: 170px;
+    top: 75px;
+    left: 200px;
     box-shadow: 0 4px 4px rgba(#000, 0.25);
     padding: 13px 9px;
     z-index: 2;
@@ -1102,9 +1170,6 @@
     line-height: 19px;
     letter-spacing: 0.03em;
     color: #f2f2f2;
-  }
-  &__link:hover {
-    text-decoration: underline;
   }
   &__icon-socials {
     &:first-child {

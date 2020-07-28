@@ -57,6 +57,9 @@
   .catalog__box {
     max-width: 231px;
   }
+  .catalog__box-backlay {
+    width: 253px;
+  }
   .questions__form-title {
     font-size: 28px;
   }
@@ -139,6 +142,16 @@
   }
   .footer__copyright {
     font-size: 12px;
+  }
+  .contacts__direction {
+    top: 70px;
+    left: 148px;
+  }
+}
+@media (max-width: 1366px) {
+  .contacts__direction {
+    top: 70px;
+    left: 148px;
   }
 }
 @media (max-width: 1024px) {
@@ -361,6 +374,10 @@
     width: 171px;
     margin: 0 25px;
   }
+  .contacts__direction {
+    top: 70px;
+    left: 88px;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -477,6 +494,12 @@
     margin-top: 25px;
     width: 247px;
   }
+  .contacts__direction {
+    left: 137px;
+  }
+  .about .two {
+    min-width: 62px;
+  }
 }
 @media (max-width: 425px) {
   .header__bottom .container {
@@ -527,7 +550,7 @@
     justify-content: center;
   }
   .top__slider-box {
-    padding-bottom: 280px;
+    padding-bottom: 400px;
   }
   .top .slick-dots {
     bottom: -10px;
@@ -536,6 +559,12 @@
   .top__advans {
     width: 95%;
     margin: 0 auto;
+    box-shadow: none;
+  }
+  .top__advans-item {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.04);
+    padding: 15px 25px;
+    border-radius: 15px;
   }
   .about__info {
     margin-left: 15px;
@@ -551,7 +580,7 @@
     margin-bottom: 15px;
   }
   .catalog__box {
-    max-width: 180px;
+    max-width: 230px;
   }
   .catalog__boxes {
     justify-content: space-around;
@@ -640,8 +669,15 @@
     width: 100%;
     z-index: -1;
   }
+  .contacts__direction-link::after {
+    left: -77px;
+  }
 }
 @media (max-width: 375px) {
+  iframe {
+    width: 110%;
+    margin-left: -13px;
+  }
   .header__text {
     margin-right: 0;
   }

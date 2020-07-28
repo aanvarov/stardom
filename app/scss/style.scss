@@ -33,6 +33,9 @@
       line-height: 24px;
       color: #adaeb0;
     }
+    &:focus {
+      outline-color: $blue-base;
+    }
   }
   &__search-btn {
     position: absolute;
@@ -45,7 +48,17 @@
     line-height: 32px;
     letter-spacing: -0.04em;
     &:hover {
-      text-decoration: underline;
+      color: $blue-base;
+    }
+  }
+  .navbar-toggler {
+    display: none;
+    margin: 5px;
+    &__item {
+      width: 45px;
+      height: 2px;
+      background-color: #fff;
+      margin: 10px 0;
     }
   }
   &__bottom {
@@ -57,7 +70,6 @@
       letter-spacing: 0.03em;
       text-transform: uppercase;
       color: #ffffff;
-      padding: 12px 0;
     }
   }
   .menu {
@@ -65,13 +77,14 @@
       display: flex;
     }
     &__list-item {
-      margin: 0 15px;
+      margin: 0 8px;
     }
     &__list-link {
       @extend %gilroy-medium;
-      padding: 4px;
+      padding: 15px;
+      display: inline-block;
       &:hover {
-        text-decoration: underline;
+        background-color: $blue-base;
       }
     }
   }
@@ -82,7 +95,18 @@
   }
   &__ask-link {
     @extend %gilroy-bold;
-    margin-left: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 10px;
+    }
+    &:hover {
+      background-color: $blue-base;
+      .questions__ask-link + img {
+        background-color: $blue-base;
+      }
+    }
   }
 }
 .top {
@@ -109,8 +133,8 @@
     }
     .slick-active {
       button {
-        background-color: #3e7ee7;
-        border-color: #3e7ee7;
+        background-color: $blue-base;
+        border-color: $blue-base;
       }
     }
   }
@@ -212,6 +236,7 @@
     }
   }
   &__buclet-link {
+    @extend %gilroy-medium;
     font-size: 16px;
     line-height: 24px;
     color: #fff;
@@ -222,11 +247,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    img {
+    border: 1px solid $btn-color;
+    svg {
       margin-right: 10px;
     }
+    path,
+    rect {
+      fill: #fff;
+    }
     &:hover {
-      text-decoration: underline;
+      background-color: #fff;
+      color: $btn-color;
+      path,
+      rect {
+        fill: $btn-color;
+      }
     }
   }
   &__info {
@@ -255,7 +290,7 @@
   &__info-btn {
     margin-top: 10px;
     display: inline-block;
-    color: #3e7ee7;
+    color: $blue-base;
     img {
       margin-left: 5px;
     }
@@ -292,6 +327,7 @@
 }
 .catalog {
   text-align: center;
+  overflow: hidden;
   &__slider-box {
     padding-top: 75px;
   }
@@ -374,12 +410,14 @@
     border-radius: 6px;
     margin-bottom: 32px;
     padding: 15px 22px;
+    transition: transform 0.3s;
     &:hover {
-      transition: transform 0.1s;
       transform: scaleX(1.11);
       margin-bottom: -38px;
       .catalog__box-btn {
         display: inline-block;
+        visibility: visible;
+        opacity: 1;
       }
     }
   }
@@ -421,7 +459,9 @@
     @extend %helvetica-regular;
   }
   &__box-btn {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
     padding: 12px 60px;
     @extend %gilroy-bold;
     color: #fff;
@@ -507,6 +547,9 @@
     &::placeholder {
       color: #5f5f5f;
     }
+    &:focus {
+      outline-color: $blue-base;
+    }
   }
   .select {
     -webkit-appearance: none;
@@ -530,6 +573,9 @@
     color: #000;
     height: 121px;
     margin-bottom: 25px;
+    &:focus {
+      outline-color: $blue-base;
+    }
   }
   &__form-line {
     display: flex;
@@ -559,7 +605,7 @@
     z-index: -999;
     &:checked + span {
       background-image: url(../images/tick.svg);
-      background-position: 0 -2px;
+      background-position: -1px -2px;
     }
   }
   &__form-label {
@@ -567,6 +613,9 @@
     position: relative;
     cursor: pointer;
     z-index: 1;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
   }
   &__form-submit {
     @extend %gilroy-semibold;
@@ -983,6 +1032,9 @@
   &__label {
     padding-left: 27px;
     z-index: 1;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
   }
   &__form-link {
     color: #3e7ee7;

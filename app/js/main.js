@@ -4,8 +4,12 @@ $(function () {
     autoplay: true,
     fade: true,
     autoplaySpeed: 2500,
-    dots: true,
-    arrows: false
+    arrows: false,
+    // customPaging: function (slider, i) {
+    //   var thumb = $(slider.$slides[i]).data();
+    //   return '<a>'+(i+1)+'</a>';
+    // },
+    dots: true
   });
   $('.catalog__slider').slick({
     slidesToShow: 1,
@@ -16,8 +20,9 @@ $(function () {
     draggable: false
   });
   $('.catalog__slider-nav').slick({
-    infinite: false,
+    infinite: true,
     draggable: false,
+    outerEdgeLimit: false,
     asNavFor: '.catalog__slider',
     slidesToScroll: 1,
     focusOnSelect: true,
@@ -30,6 +35,10 @@ $(function () {
   $('.partners__slider').slick({
     infinite: true,
     slidesToShow: 6,
+    prevArrow:
+      '<button class="slider-btn slider-btn__left"><svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 24V21.1716V13L40 13V11L12 11V2.82843V0L10 2L1.41422 10.5858L0 12L1.41422 13.4142L10 22L12 24ZM2.82843 12L10 19.1716V4.82843L2.82843 12Z"/></svg></button>',
+    nextArrow:
+      '<button class="slider-btn slider-btn__right"><svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M28 24V21.1716V13L0 13V11L28 11V2.82843V0L30 2L38.5858 10.5858L40 12L38.5858 13.4142L30 22L28 24ZM37.1716 12L30 19.1716V4.82843L37.1716 12Z"/></svg></button>',
     responsive: [
       {
         breakpoint: 1500,
@@ -44,11 +53,18 @@ $(function () {
           slidesToShow: 3,
           slidesToScroll: 3
         }
-      }],
-    prevArrow:
-      '<button class="slider-btn slider-btn__left"><svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 24V21.1716V13L40 13V11L12 11V2.82843V0L10 2L1.41422 10.5858L0 12L1.41422 13.4142L10 22L12 24ZM2.82843 12L10 19.1716V4.82843L2.82843 12Z"/></svg></button>',
-    nextArrow:
-      '<button class="slider-btn slider-btn__right"><svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M28 24V21.1716V13L0 13V11L28 11V2.82843V0L30 2L38.5858 10.5858L40 12L38.5858 13.4142L30 22L28 24ZM37.1716 12L30 19.1716V4.82843L37.1716 12Z"/></svg></button>'
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          prevArrow: false,
+          nextArrow: false,
+          dots: true
+        }
+      }
+    ]
   });
 
   $('.contacts__nav-link').on('click', function () {
@@ -56,6 +72,10 @@ $(function () {
     $(this).addClass('active');
     $('.contacts__item').hide().animate({ opacity: 0 }, 10);
     $($(this).data("target")).show().animate({ opacity: 1 }, 500);
+  });
+
+  $('.navbar-toggler').click(function(){
+    $('.header__bottom__inner').toggle(300);
   });
 
 });

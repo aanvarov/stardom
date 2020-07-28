@@ -502,6 +502,9 @@
   }
 }
 @media (max-width: 425px) {
+  .section {
+    overflow: hidden;
+  }
   .about__info-btn {
     padding-left: 0;
   }
@@ -610,7 +613,7 @@
     padding: 15px 17px;
   }
   .catalog__box-backlay {
-    width: 244px;
+    width: 202px;
   }
   .catalog__boxes {
     justify-content: space-around;

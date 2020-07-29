@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>Stardom</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -1568,8 +1569,9 @@
                         </div>
 
                     </div>
-                    <div class="contacts__map">
-                        <iframe
+                    <div id="map" class="contacts__map">
+                        
+                        <!-- <iframe
                             src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad740c5e77bb7eec6faa82acc9590048508518314d3ad10d255235ad784cb9f52&amp;source=constructor"
                             width="100%" height="276" frameborder="0"></iframe>
                         <div class="contacts__direction">
@@ -1580,8 +1582,7 @@
                                 </p>
                                 <a class="contacts__direction-link" href="#">Get direction</a>
                             </div>
-                        </div>
-                        <img class="ellipse" src="images/ellipse.svg" alt="">
+                        </div> -->
                     </div>
                 </div>
 
@@ -1667,6 +1668,8 @@
     <script src="js/libs.min.js"></script>
     <script src="js/jquery.waypoints.js"></script>
     <script src="js/jquery.rcounterup.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=en_RU" type="text/javascript">
+    </script>
     <script src="js/main.js"></script>
 </body>
 

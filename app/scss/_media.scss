@@ -277,6 +277,9 @@
   .catalog__box {
     max-width: 195px;
   }
+  .catalog__box-backlay {
+    width: 217px;
+  }
   .catalog__btn {
     font-size: 15px;
     padding: 9px 65px;
@@ -520,6 +523,9 @@
   .header .navbar-toggler {
     display: inline-block;
   }
+  .header .menu__title {
+    display: inline-block;
+  }
   .header__bottom__inner {
     display: none;
   }
@@ -732,6 +738,12 @@
   }
   .catalog__box {
     max-width: 220px;
+    &:hover {
+      margin-bottom: -21px;
+    }
+  }
+  .catalog__box-backlay {
+    width: 242px;
   }
   .partners__img-wrapper {
     width: 135px;
@@ -745,13 +757,10 @@
     left: 0;
     width: 291px;
   }
-  .contacts__map .ellipse {
-    left: 21px;
-  }
   .questions__form-line {
     flex-direction: column;
   }
-  .questions__form-submit{
+  .questions__form-submit {
     margin-top: 20px;
   }
 }

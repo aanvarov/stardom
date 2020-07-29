@@ -4,6 +4,7 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 2500,
     dots: true,
+    fade: true,
     prevArrow:
       '<button class="slider-btn slider-btn__left"><svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.24137 10.7583L0.54928 6.22845C0.261351 5.95047 0.261351 5.49979 0.54928 5.22181L5.24137 0.691944C5.5293 0.413969 5.99612 0.413969 6.28405 0.691944C6.57198 0.969919 6.57198 1.42061 6.28405 1.69858L2.17409 5.66645C2.17572 5.6858 2.17656 5.70537 2.17656 5.72513C2.17656 5.74489 2.17572 5.76446 2.17409 5.78381L6.28405 9.75168C6.57198 10.0297 6.57198 10.4803 6.28405 10.7583C5.99612 11.0363 5.5293 11.0363 5.24137 10.7583Z"/></svg></button>',
     nextArrow:
@@ -75,7 +76,7 @@ $(function () {
     ]
   });
 
-  if (window.innerWidth < 430){
+  if (window.innerWidth < 430) {
     $('.news__items, .team__items').slick({
       slidesToScroll: 1,
       slidesToShow: 1,
@@ -96,7 +97,7 @@ $(function () {
   $('.navbar-toggler').click(function () {
     $('.header__bottom__inner').toggle(300);
   });
-  
+
   $('.about__info-btn').click(function () {
     $('.showmore').toggle(400);
   });
@@ -114,4 +115,45 @@ $(function () {
 
   $('.count').rCounter();
 
+
 });
+
+
+// Функция ymaps.ready() будет вызвана, когда
+// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+ymaps.ready(init);
+var myMap,
+  myPlacemark;
+function init() {
+  // Создание карты.    
+  myMap = new ymaps.Map("map", {
+    // Координаты центра карты.
+    // Порядок по умолчанию: «широта, долгота».
+    // Чтобы не определять координаты центра карты вручную,
+    // воспользуйтесь инструментом Определение координат.
+    center: [41.354109, 69.255677],
+    // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 16.5
+  });
+
+  myPlacemark = new ymaps.Placemark([41.353817, 69.254190], {
+    // balloonContent: 'Это красивая метка'
+  },
+    {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: 'images/map-pin.png',
+      // Размеры метки.
+      iconImageSize: [322, 124],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-50, -120]
+    }
+
+  );
+
+  myMap.geoObjects.add(myPlacemark);
+};

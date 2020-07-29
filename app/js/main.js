@@ -180,11 +180,9 @@ function init() {
     center: [41.354109, 69.255677],
     // Уровень масштабирования. Допустимые значения:
     // от 0 (весь мир) до 19.
-    zoom: 16.5
+    zoom: 16.5,
+    controls: []
   });
-  
-  // map.control.Manager.remove(control);
-  // myMap.behaviors.disable('ruler');
 
   myPlacemark = new ymaps.Placemark([41.353817, 69.254190], {
     // balloonContent: 'Это красивая метка'
@@ -203,6 +201,24 @@ function init() {
     }
 
   );
+  myPlacemark1 = new ymaps.Placemark([41.353817, 69.254190], {
+    // balloonContent: 'Это красивая метка'
+  },
+    {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: 'images/ellipse.svg',
+      // Размеры метки.
+      iconImageSize: [44, 44],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-22, -25]
+    }
 
+  );
+
+  myMap.geoObjects.add(myPlacemark1);
   myMap.geoObjects.add(myPlacemark);
 };

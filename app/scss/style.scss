@@ -56,10 +56,10 @@
     display: none;
     margin: 5px;
     &__item {
-      width: 40px;
+      width: 35px;
       height: 2px;
       background-color: #fff;
-      margin: 8px 0;
+      margin: 7px 0;
     }
   }
   &__bottom {
@@ -90,11 +90,12 @@
     }
     &__title {
       display: none;
-      @extend %gilroy-bold;
-      font-size: 24px;
+      @extend %gilroy-regular;
+      font-size: 22px;
       line-height: 28px;
       color: #fff;
       margin-left: 20px;
+      text-transform: uppercase;
     }
     &__search {
       display: none;
@@ -157,30 +158,21 @@
     padding-bottom: 54px;
   }
   .slider-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: $btn-color;
-    box-shadow: 0px 2px 20px rgba(198, 198, 198, 0.25);
     position: absolute;
-    top: calc(50% - 15px);
-    &:hover {
-      background-color: #fff;
-      svg {
-        fill: #000;
-      }
+    top: calc(50% - 12px);
+    path {
+      fill: $btn-color;
     }
     &__left {
-      left: -60px;
+      left: -72px;
     }
     &__right {
-      right: -60px;
+      right: -72px;
     }
-    svg {
-      fill: white;
+    &:hover {
+      path {
+        fill: #3e7ee7;
+      }
     }
   }
   .slick-dots {
@@ -303,6 +295,12 @@
       z-index: -1;
     }
   }
+  span {
+    color: $blue-base;
+  }
+  .icon-transform {
+    transform: rotate(180deg);
+  }
   &__buclet-link {
     @extend %gilroy-medium;
     font-size: 12px;
@@ -315,6 +313,7 @@
     align-items: center;
     justify-content: center;
     border: 1px solid $btn-color;
+    border-radius: 3px;
     svg {
       margin-right: 10px;
     }
@@ -355,13 +354,17 @@
     display: block;
   }
   &__info-btn {
+    @extend %gilroy-regular;
+    padding: 0;
     margin-top: 10px;
+    margin-bottom: 20px;
     display: inline-block;
     color: $blue-base;
     font-size: 14px;
     line-height: 30px;
     img {
       margin-left: 5px;
+      margin-bottom: 3px;
     }
   }
   .showmore {
@@ -502,7 +505,6 @@
       box-shadow: 0px 8px 24px 15px rgba(16, 62, 105, 0.1);
     }
     &:hover {
-      // transform: scaleX(1.11);
       background-color: transparent;
       box-shadow: none;
       z-index: 5;
@@ -762,6 +764,33 @@
       left: 130px;
     }
   }
+  .slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $btn-color;
+    box-shadow: 0px 2px 20px rgba(198, 198, 198, 0.25);
+    position: absolute;
+    top: calc(50% - 15px);
+    &:hover {
+      background-color: #fff;
+      svg {
+        fill: #000;
+      }
+    }
+    &__left {
+      left: -60px;
+    }
+    &__right {
+      right: -60px;
+    }
+    svg {
+      fill: white;
+    }
+  }
   .slick-dots {
     position: absolute;
     bottom: -45px;
@@ -829,11 +858,11 @@
   &__item {
     max-width: 304px;
     background: #fff;
-    box-shadow: 0px 8px 24px rgba(16, 62, 105, 0.1);
+    box-shadow: 0px 1px 5px rgba(16, 62, 105, 0.1);
     transition: all 0.3s;
     cursor: pointer;
     &:hover {
-      box-shadow: 0px 8px 24px rgba(16, 62, 105, 0.5);
+      box-shadow: 0px 8px 18px rgba(16, 62, 105, 0.3);
     }
   }
   &__img {
@@ -886,6 +915,36 @@
     bottom: 49px;
     width: 100%;
     z-index: -1;
+  }
+  .slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $btn-color;
+    box-shadow: 0px 2px 20px rgba(198, 198, 198, 0.25);
+    position: absolute;
+    top: calc(50% - 15px);
+    &:hover {
+      background-color: #fff;
+      svg {
+        fill: #000;
+      }
+    }
+    &__left {
+      left: -60px;
+    }
+    &__right {
+      right: -60px;
+    }
+    svg {
+      fill: white;
+    }
+  }
+  .slick-list {
+    padding: 20px 0;
   }
   .slick-dots {
     position: absolute;

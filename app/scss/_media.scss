@@ -74,7 +74,7 @@
     margin-right: 35px;
   }
   .questions__form-input {
-    padding: 13px 15px 15px;
+    padding: 13px 15px 13px;
     margin-bottom: 21px;
   }
   .news__item {
@@ -95,6 +95,12 @@
   }
   .team__item {
     max-width: 250px;
+  }
+  .team .slider-btn__left {
+    left: -40px;
+  }
+  .team .slider-btn__right {
+    right: -40px;
   }
   .contacts__infos {
     min-width: 730px;
@@ -456,6 +462,10 @@
     top: 55px;
     left: 105px;
   }
+  .team__items {
+    width: 90%;
+    margin: 25px auto;
+  }
   .team__item {
     max-width: 250px;
     margin-bottom: 50px;
@@ -505,6 +515,18 @@
   }
 }
 @media (max-width: 425px) {
+  .questions__form-input:focus {
+    outline: none;
+  }
+  .news__item:hover {
+    box-shadow: none;
+    .news__item-title {
+      color: #000;
+    }
+  }
+  .header__phone-link {
+    font-size: 17px;
+  }
   .section {
     overflow: hidden;
   }
@@ -554,7 +576,7 @@
     display: none;
   }
   .logo {
-    margin: 0 auto;
+    margin-left: 15px;
     padding: 0;
   }
   .logo__img img {
@@ -587,13 +609,17 @@
   }
   .top__advans {
     width: 95%;
-    margin: 0 auto;
+    margin-left: 5px;
     box-shadow: none;
   }
   .top__advans-item {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.04);
-    padding: 15px 25px;
-    border-radius: 15px;
+    padding: 17px 30px;
+    border-radius: 6px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .about__info {
     margin-left: 15px;
@@ -661,10 +687,11 @@
   }
   .contacts__nav {
     flex-wrap: wrap;
+    margin: 0 -28px 0 -12px;
   }
   .contacts__nav-item {
     margin-top: 8px;
-    margin-right: 8px;
+    margin-right: 4px;
   }
   .contacts__nav-link {
     font-size: 14px;
@@ -765,12 +792,16 @@
   }
 }
 @media (max-width: 350px) {
+  .header__phone-link {
+    font-size: 13px;
+  }
+  .logo {
+    margin-left: 0px;
+    padding: 0;
+  }
   .header__text {
     font-size: 12px;
     width: 140px;
-  }
-  .header__phone-link {
-    font-size: 19px;
   }
   .top__text {
     width: 280px;
@@ -788,5 +819,12 @@
   }
   .about__item {
     margin: 8px 10px;
+  }
+  .partners__slider .slick-slide {
+    margin: 0 8px;
+  }
+  .partners__slider .slick-list {
+    padding: 20px 0;
+    margin: 0 -30px;
   }
 }

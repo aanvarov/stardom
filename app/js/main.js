@@ -1,4 +1,12 @@
 $(function () {
+
+  $(window).on('load', function () {
+
+    setTimeout(function() {
+      $('#preloader').fadeOut('slow', function() {});
+    }, 2000);
+  });
+
   $('.top__slider').slick({
     infinite: true,
     autoplay: true,
@@ -91,7 +99,7 @@ $(function () {
       {
         breakpoint: 1050,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 3
         }
       },
       {
